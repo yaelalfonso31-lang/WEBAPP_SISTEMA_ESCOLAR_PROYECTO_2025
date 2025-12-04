@@ -1,0 +1,231 @@
+.wrapper {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/assets/images/fondo-azul.jpg');
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.reg-shell {
+  display: grid;
+  gap: 20px;
+  padding: clamp(16px, 3vw, 28px);
+}
+
+/* Tarjeta de selección de rol */
+.role-card {
+  width: min(100%, 980px);
+  margin-inline: auto;
+
+  .role-card-header {
+    display: flex;
+    flex-direction: row;
+    ;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+
+  .actions-header-colum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2px;
+    flex: 1;
+  }
+
+  .role-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 12px;
+  }
+
+  .role-pill {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding: 6px 10px;
+  }
+
+  .title-card {
+    width: 100%;
+    font-family: Nexa-Bold, Arial, sans-serif;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle-card {
+    width: 100%;
+    font-family: Nexa-Light, Arial, sans-serif;
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 1.25rem);
+    color: #000000;
+    margin-top: 1rem;
+  }
+
+  .text-radio {
+    width: 100%;
+    font-size: 1.25rem;
+    font-family: Nexa, Arial, sans-serif;
+    color: #000000;
+  }
+}
+
+/* ✅ CONTENEDOR DEL BOTÓN REGRESAR - CORREGIDO */
+.actions-row {
+  margin: 8px 0 0 0; /* Quita el auto que centraba */
+  display: flex;
+  justify-content: flex-start; /* Botón a la izquierda */
+  display: flex;
+  align-items: center;
+  padding-left: 0; /* Asegura que no tenga padding izquierdo */
+}
+
+/* Botón regresar estilo unificado con diseño anterior */
+.back-btn {
+  background-color: transparent;
+  color: #231F20;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #0092B8;
+    color: #0092B8;
+    background-color: rgba(0, 146, 184, 0.05);
+  }
+}
+
+/* Variante: si quieres que sea botón grande (208px), respeta tu layout */
+.back-btn.large {
+  width: 208px;
+  height: 48px;
+  border-radius: 8px;
+  font-family: 'Nexa-Bold';
+  font-size: 16px;
+  font-weight: bold;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+/* Icono dentro del botón */
+.back-btn mat-icon,
+.back-btn .mat-icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Área de formularios */
+.forms-area {
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+/* =========================
+   Estilos para el mat-radio-button con MDC
+   ========================= */
+
+.mat-icon{
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep .mat-mdc-radio-button mat-icon {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0092B8;
+  transition: color 0.3s ease;
+}
+
+::ng-deep .mat-mdc-radio-button:hover mat-icon {
+  color: #0092B8;
+}
+
+::ng-deep .mat-mdc-radio-button .mdc-form-field {
+  color: #231F20;
+  font-family: Nexa;
+  font-size: 20px;
+}
+
+::ng-deep .mat-mdc-radio-button.mat-accent {
+  --mdc-radio-selected-focus-icon-color: #0092B8;
+  --mdc-radio-selected-hover-icon-color: #0092B8;
+  --mdc-radio-selected-icon-color: #0092B8;
+  --mdc-radio-selected-pressed-icon-color: #0092B8;
+  --mat-radio-ripple-color: #000;
+  --mat-radio-checked-ripple-color: #0092B8;
+}
+
+::ng-deep .mdc-radio {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+  box-sizing: content-box;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  will-change: opacity,transform,border-color,color;
+}
+
+/* =========================
+   Ajustes para la vista móvil (≤700px)
+   ========================= */
+
+@media (max-width: 700px) {
+  ::ng-deep .mdc-label {
+    width: 180px;
+  }
+  .role-card {
+    padding: 15px;
+  }
+
+  .role-row {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .role-pill {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .title-perfil {
+    text-align: center;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .title-table {
+    text-align: center;
+    font-size: clamp(1.75rem, 1.3rem + 1.3vw, 2.25rem);
+    line-height: 1.25;
+    margin-top: 0.5rem;
+  }
+
+  .mat-radio-button {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,277 @@
+/* =========================================================
+   WRAPPER GLOBAL
+========================================================= */
+.wrapper {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/assets/images/fondo-azul.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 0;
+}
+
+/* Contenedor principal: coloca header y card verticales */
+.reg-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(16px, 3vw, 28px);
+  gap: 25px;
+}
+
+/* =========================================================
+   TARJETAS PRINCIPALES
+========================================================= */
+.header-card,
+.content-card {
+  width: min(100%, 980px);
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* =========================================================
+   HEADER CARD
+========================================================= */
+.header-card {
+  padding: 30px 40px;
+}
+
+.custom-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: #231F20;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+
+  &:hover {
+    border-color: #0092B8;
+    color: #0092B8;
+    background-color: rgba(0,146,184,0.05);
+  }
+}
+
+/* Textos del header */
+.header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-card {
+  font-family: 'Nexa-Bold', sans-serif;
+  font-size: 1.8rem;
+  color: #231F20;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.subtitle-card {
+  width: 100%;
+    font-family: Nexa-Light, Arial, sans-serif;
+    font-size: clamp(1rem, 0.8rem + 0.5vw, 1.25rem);
+    color: #000000;
+    margin-top: 1rem;
+}
+
+/* Icono grande en el header */
+.header-icon .big-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  color: #0092B8;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+mat-card-content {
+  padding: 40px !important;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grids para inputs */
+.row-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.mat-input-full { width: 100%; }
+
+.mat-input-half {
+  width: 100%;
+  @media (max-width: 768px) { width: 100%; }
+}
+
+/* Ajuste Material Angular */
+::ng-deep .mat-mdc-form-field {
+  width: 100%;
+}
+
+/* Checkboxes */
+.checkbox-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.label-checkbox {
+  font-family: Nexa-Bold, Arial, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.invalid-feedback {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  font-family: 'Nexa-Light', sans-serif;
+}
+
+/* =========================================================
+   BOTONES
+========================================================= */
+.section-buttons { //
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.btn {
+  width: 208px;
+  height: 48px;
+  border-radius: 8px;
+  font-family: 'Nexa-Bold';
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s ease;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.btn-primary {
+  background-color: #0092B8;
+  color: #FFF;
+  &:hover { background-color: #017895; }
+}
+
+.btn-danger {
+  background-color: #FFF;
+  color: #E84150;
+  border: 1px solid #E84150;
+
+  &:hover {
+    background-color: #E84150;
+    color: #FFF;
+  }
+}
+
+/* Cambiar el color de fondo y borde cuando el checkbox está seleccionado */
+::ng-deep .mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background,
+::ng-deep .mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__ripple {
+  background-color: #0092B8 !important; /* Fondo azul cuando está seleccionado */
+  border-color: #0092B8 !important; /* Borde azul cuando está seleccionado */
+}
+
+/* Cambiar el color de la caja de verificación (cuando está en focus) */
+::ng-deep .mat-mdc-checkbox:focus .mdc-checkbox__background {
+  border-color: #1565C0 !important; /* Color del borde cuando el checkbox tiene focus */
+}
+
+/* Aumentar el tamaño del checkbox */
+::ng-deep .mat-mdc-checkbox .mdc-checkbox__ripple {
+  transform: scale(1.2); /* Aumentar el tamaño del ripple */
+}
+
+/* Estilo del icono dentro del checkbox (marca de verificación) */
+::ng-deep .mat-mdc-checkbox .mdc-checkbox__checkmark {
+  transform: scale(1.3); /* Aumentar el tamaño de la marca de verificación */
+  stroke-width: 3px; /* Aumentar el grosor de la marca de verificación */
+}
+
+/* Estilo cuando se pasa el mouse (hover) sobre el checkbox */
+::ng-deep .mat-mdc-checkbox:hover .mdc-checkbox__background {
+  background-color: rgba(0, 146, 184, 0.1); /* Fondo suave al pasar el ratón */
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 600px) {
+  .reg-shell {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .header-card,
+  .content-card {
+    border-radius: 12px;
+  }
+
+  .header-card {
+    padding: 20px;
+  }
+
+  .custom-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .header-icon { display: none; }
+
+  mat-card-content {
+    padding: 20px !important;
+  }
+}
