@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  url_api: "http://127.0.0.1:8000/api" //8000 es el puerto por defecto de Django
+  production: true,
+  apiUrl: 'https://AlfonsoSerrano31.pythonanywhere.com'
+  // Asegúrate que sea HTTPS y el dominio correcto
 };
