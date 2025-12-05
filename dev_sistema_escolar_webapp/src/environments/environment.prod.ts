@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  url_api: 'http://127.0.0.1:8000' // URL de producción
+  // Ojo: Sin la barra '/' al final si tu código Angular la añade después
+  apiUrl: 'https://AlfonsoSerrano31.pythonanywhere.com'
 };
