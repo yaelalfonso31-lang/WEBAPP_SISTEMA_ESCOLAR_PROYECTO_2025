@@ -144,7 +144,7 @@ export class MaestrosService {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.post<any>(`${environment.url_api}/registro/maestro/`, data, { headers });
+    return this.http.post<any>(`${environment.url_api}/api/registro/maestro/`, data, { headers });
   }
 
   //Obtener lista de maestros
@@ -157,7 +157,7 @@ export class MaestrosService {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.get<any>(`${environment.url_api}/lista-maestros/`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/lista-maestros/`, { headers });
   }
 
   // Obtener un solo maestro por su ID (Para editar)
@@ -171,7 +171,7 @@ export class MaestrosService {
       console.log("No se encontró el token del usuario");
     }
     // Enviamos el ID como parámetro en la URL
-    return this.http.get<any>(`${environment.url_api}/registro/maestro/?id=${idMaestro}`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/registro/maestro/?id=${idMaestro}`, { headers });
   }
 
   // Actualizar (PUT)
@@ -184,7 +184,7 @@ export class MaestrosService {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log("No se encontró el token del usuario");
     }
-    return this.http.put<any>(`${environment.url_api}/registro/maestro/`, data, { headers });
+    return this.http.put<any>(`${environment.url_api}/api/registro/maestro/`, data, { headers });
   }
 
   //Servicio para eliminar un maestro
@@ -197,7 +197,7 @@ export class MaestrosService {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.delete<any>(`${environment.url_api}/registro/maestro/?id=${idMaestro}`, { headers });
+    return this.http.delete<any>(`${environment.url_api}/api/registro/maestro/?id=${idMaestro}`, { headers });
   }
 
 }

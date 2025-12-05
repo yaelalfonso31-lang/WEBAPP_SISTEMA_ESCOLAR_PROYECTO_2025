@@ -155,7 +155,7 @@ export class AlumnosService {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.post<any>(`${environment.url_api}/registro/alumno/`, data, { headers });
+    return this.http.post<any>(`${environment.url_api}/api/registro/alumno/`, data, { headers });
   }
 
   //Obtener lista de alumnos
@@ -168,7 +168,7 @@ export class AlumnosService {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.get<any>(`${environment.url_api}/lista-alumnos/`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/lista-alumnos/`, { headers });
   }
 
   // Actualizar (PUT)
@@ -181,7 +181,7 @@ export class AlumnosService {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log("No se encontró el token del usuario");
     }
-    return this.http.put<any>(`${environment.url_api}/registro/alumno/`, data, { headers });
+    return this.http.put<any>(`${environment.url_api}/api/registro/alumno/`, data, { headers });
   }
 
   // Obtener un solo alumno por su ID
@@ -194,7 +194,7 @@ export class AlumnosService {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log("No se encontró el token del usuario");
     }
-    return this.http.get<any>(`${environment.url_api}/registro/alumno/?id=${idAlumno}`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/registro/alumno/?id=${idAlumno}`, { headers });
   }
 
   //Eliminar alumno
@@ -207,7 +207,7 @@ export class AlumnosService {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.delete<any>(`${environment.url_api}/registro/alumno/?id=${idAlumno}`, { headers });
+    return this.http.delete<any>(`${environment.url_api}/api/registro/alumno/?id=${idAlumno}`, { headers });
   }
 
 

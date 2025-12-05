@@ -118,7 +118,7 @@ export class AdministradoresService {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.post<any>(`${environment.url_api}/registro/admin/`,data, { headers });
+    return this.http.post<any>(`${environment.url_api}/api/registro/admin/`,data, { headers });
   }
 
 
@@ -132,7 +132,7 @@ export class AdministradoresService {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log("No se encontró el token del usuario");
     }
-    return this.http.get<any>(`${environment.url_api}/lista-admins/`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/lista-admins/`, { headers });
   }
 
 
@@ -146,7 +146,7 @@ export class AdministradoresService {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log("No se encontró el token del usuario");
     }
-    return this.http.put<any>(`${environment.url_api}/registro/admin/`, data, { headers });
+    return this.http.put<any>(`${environment.url_api}/api/registro/admin/`, data, { headers });
   }
 
 
@@ -161,7 +161,7 @@ export class AdministradoresService {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log("No se encontró el token del usuario");
     }
-    return this.http.get<any>(`${environment.url_api}/registro/admin/?id=${idAdmin}`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/registro/admin/?id=${idAdmin}`, { headers });
   }
 
 
@@ -175,7 +175,7 @@ export class AdministradoresService {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log("No se encontró el token del usuario");
     }
-    return this.http.delete<any>(`${environment.url_api}/registro/admin/?id=${idAdmin}`, { headers });
+    return this.http.delete<any>(`${environment.url_api}/api/registro/admin/?id=${idAdmin}`, { headers });
   }
 
   // Servicio para obtener el total de usuarios registrados por rol
@@ -188,7 +188,7 @@ export class AdministradoresService {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log("No se encontró el token del usuario");
     }
-    return this.http.get<any>(`${environment.url_api}/total-usuarios/`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/total-usuarios/`, { headers });
   }
 
 

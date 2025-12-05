@@ -160,7 +160,7 @@ private convertTo24Hour(timeStr: string): string {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
 
-    return this.http.post<any>(`${environment.url_api}/registro/evento/`, data, { headers });
+    return this.http.post<any>(`${environment.url_api}/api/registro/evento/`, data, { headers });
   }
 
 
@@ -173,7 +173,7 @@ private convertTo24Hour(timeStr: string): string {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.get<any>(`${environment.url_api}/lista-eventos/`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/lista-eventos/`, { headers });
   }
 
   // Obtener un evento por ID para edición
@@ -185,7 +185,7 @@ private convertTo24Hour(timeStr: string): string {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.get<any>(`${environment.url_api}/registro/evento/?id=${idEvento}`, { headers });
+    return this.http.get<any>(`${environment.url_api}/api/registro/evento/?id=${idEvento}`, { headers });
   }
 
   // Actualizar evento
@@ -197,7 +197,7 @@ private convertTo24Hour(timeStr: string): string {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.put<any>(`${environment.url_api}/registro/evento/`, data, { headers });
+    return this.http.put<any>(`${environment.url_api}/api/registro/evento/`, data, { headers });
   }
 
   // Eliminar evento
@@ -209,6 +209,6 @@ private convertTo24Hour(timeStr: string): string {
     } else {
       headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    return this.http.delete<any>(`${environment.url_api}/registro/evento/?id=${idEvento}`, { headers });
+    return this.http.delete<any>(`${environment.url_api}/api/registro/evento/?id=${idEvento}`, { headers });
   }
 }
