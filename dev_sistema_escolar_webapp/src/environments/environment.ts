@@ -4,6 +4,6 @@
 
 export const environment = {
   production: true,
-  apiUrl: 'https://AlfonsoSerrano31.pythonanywhere.com'
-  // Asegúrate que sea HTTPS y el dominio correcto
+  // Cambiamos 'apiUrl' por 'url_api' para que coincida con tu código
+  url_api: 'https://AlfonsoSerrano31.pythonanywhere.com'
 };
